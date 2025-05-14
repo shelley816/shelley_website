@@ -11,12 +11,13 @@ import Background from "./background/Background";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  preload: false,
 });
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"], // 自訂要用的字重
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
 export default function HtmlContainer({ children }) {

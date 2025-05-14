@@ -49,11 +49,11 @@ export default function Background({ bodyHeight, isDark }) {
           ></motion.div>
           <motion.div
             style={{ y: circleNo2ScrollY, x: circleNo2ScrollX }}
-            className={`${circleNo2} top-80 lg:top-50 -right-[35%] lg:-right-[12%] size-90 md:size-130`}
+            className={`${circleNo2} top-80 lg:top-60 -right-[35%] lg:-right-[12%] size-90 md:size-130`}
           ></motion.div>
           <motion.div
             style={{ y: circleNo3ScrollY, x: circleNo3ScrollX }}
-            className={`${circleNo3} top-160 md:top-220 lg:top-160 left-[5%] lg:left-[20%] size-120 md:size-180 lg:size-120`}
+            className={`${circleNo3} top-160 md:top-220 lg:top-180 left-[5%] lg:left-[20%] size-120 md:size-180 lg:size-120`}
           ></motion.div>
         </div>
       )}
