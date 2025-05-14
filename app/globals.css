@@ -32,10 +32,3 @@ body {
   color: var(--foreground);
   font-family: sans-serif, Arial, Helvetica;
 }
-
-.circleNo1 {
-  @apply rounded-full bg-radial-[at_30%_30%] from-[#C5D9D7]/50 via-[#DABB9F]/50 to-[#7ABEC2]/50 to-90% shadow-2xl shadow-[#A3CDCB]/50;
-}
-.circleNo2 {
-  @apply rounded-full bg-radial-[at_30%_30%] from-[#C5D9D7]/50 via-[#DABB9F]/50 to-[#7ABEC2]/50 to-90% shadow-2xl shadow-[#A3CDCB]/50;
-}
