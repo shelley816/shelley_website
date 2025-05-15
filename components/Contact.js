@@ -1,9 +1,9 @@
 import Wrap from "./ui/Wrap";
 
-export default function About() {
+export default function Contact() {
   return (
     <>
-      <Wrap title="About" areaLink="aboutSection">
+      <Wrap title="Contact" areaLink="contactSection">
         Content.....
       </Wrap>
     </>

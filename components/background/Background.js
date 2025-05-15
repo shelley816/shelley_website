@@ -7,28 +7,42 @@ const circleNo2 =
   "absolute rounded-full bg-radial-[at_30%_30%] from-white/30 via-white/20 to-white/5 to-90% backdrop-blur-xl";
 const circleNo3 =
   "absolute rounded-full bg-radial-[at_30%_30%] from-[#C5D9D7]/30 via-[#FFB07D]/10 to-[#FF8842]/5 to-90% backdrop-blur-xl";
-    
+
 export default function Background({ bodyHeight, isDark }) {
   const { scrollY } = useScroll();
   const [toX90n, setToX90n] = useState(0);
   const [toX90, setToX90] = useState(0);
+  const [toX80, setToX80] = useState(0);
   const [toX50, setToX50] = useState(0);
 
   useEffect(() => {
     const width = window.innerWidth;
+    setToX80(width * 0.8);
     setToX90(width * 0.9);
     setToX90n(width * -0.9);
     setToX50(width * 0.5);
   }, []);
 
-  const rawY = useTransform(scrollY, [0, 3000], [0, 3000]);
+  const rawY = useTransform(scrollY, [0, bodyHeight], [0, bodyHeight]);
   const circleNo1ScrollY = useSpring(rawY, { stiffness: 30, damping: 25 });
   const circleNo2ScrollY = useSpring(rawY, { stiffness: 20, damping: 15 });
   const circleNo3ScrollY = useSpring(rawY, { stiffness: 10, damping: 5 });
-  
-  const rawX1 = useTransform(scrollY, [0, 1000, 2000, 3000], [0, toX90, 0, toX90]);
-  const rawX2 = useTransform(scrollY, [0, 1000, 2000, 3000], [0, toX90n, 0, toX90n]);
-  const rawX3 = useTransform(scrollY, [0, 1000, 2000, 3000], [0, toX50, 0, toX50]);
+
+  const rawX1 = useTransform(
+    scrollY,
+    [0, 800, 1600, 2400, 3200, 4000, 4800, 5600],
+    [0, toX80, 0, toX90, 0, toX80, 0, toX90]
+  );
+  const rawX2 = useTransform(
+    scrollY,
+    [0, 800, 1600, 2400, 3200, 4000, 4800, 5600],
+    [0, toX90n, 0, toX90n, 0, toX90n, 0, toX90n]
+  );
+  const rawX3 = useTransform(
+    scrollY,
+    [0, 800, 1600, 2400, 3200, 4000, 4800, 5600],
+    [0, toX50, 0, toX50, 0, toX50, 0, toX50]
+  );
 
   const circleNo1ScrollX = useSpring(rawX1, { stiffness: 30, damping: 25 });
   const circleNo2ScrollX = useSpring(rawX2, { stiffness: 20, damping: 15 });
@@ -38,7 +52,7 @@ export default function Background({ bodyHeight, isDark }) {
     <>
       {bodyHeight > 0 && (
         <div
-          className={`absolute w-full z-0 bg-cover bg-top overflow-hidden bg-[url(../assets/bg_01.jpg)] ${
+          className={`absolute w-full z-0 bg-top bg-contain bg-no-repeat overflow-hidden bg-[url(../assets/bg.jpg)] md:bg-[url(../assets/bg_md.jpg)] xl:bg-[url(../assets/bg_xl.jpg)] ${
             isDark && "invert opacity-20"
           }`}
           style={{ height: `${bodyHeight}px` }}
@@ -49,7 +63,7 @@ export default function Background({ bodyHeight, isDark }) {
           ></motion.div>
           <motion.div
             style={{ y: circleNo2ScrollY, x: circleNo2ScrollX }}
-            className={`${circleNo2} top-80 lg:top-60 -right-[35%] lg:-right-[12%] size-90 md:size-130`}
+            className={`${circleNo2} top-80 lg:top-60 -right-[35%] lg:-right-[12%] size-90 md:size-140`}
           ></motion.div>
           <motion.div
             style={{ y: circleNo3ScrollY, x: circleNo3ScrollX }}

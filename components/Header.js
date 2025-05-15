@@ -1,15 +1,31 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
+
+import { motion } from "framer-motion";
 
 import Image from "next/image";
 import CloudSun from "../assets/CloudSun.svg";
 import CloudMoon from "../assets/CloudMoon.svg";
-import List from "../assets/List.svg";
+import iconList from "../assets/List.svg";
+import iconX from "../assets/X.svg";
+
+const menuList = [
+  { title: "About Me", link: "aboutSection" },
+  { title: "Projects", link: "projectsSection" },
+  { title: "Skills", link: "skillsSection" },
+  { title: "Experience", link: "experienceSection" },
+  { title: "Contact", link: "contactSection" },
+  { title: "Others", link: "othersSection" },
+];
 
 export default function Header({ onModeChange, isDark }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleMenuClick() {
     setIsMenuOpen(true);
+  }
+  function handleMenuClose() {
+    setIsMenuOpen(false);
   }
 
   function handleScroll(e, itsSection) {
@@ -35,65 +51,95 @@ export default function Header({ onModeChange, isDark }) {
 
   return (
     <>
-      <header className="fixed z-50 w-full bg-[var(--background-secondary)]">
+      <motion.header
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className={`color-transition fixed z-50 w-full ${
+          isMenuOpen
+            ? "bg-[var(--background-secondary)]"
+            : "bg-[var(--background-secondary)]/0"
+        }`}
+      >
         <div className="w-11/12 h-15 mx-auto flex gap-4 items-center justify-between">
           <h1 className="font-[family-name:var(--font-poppins)] font-[600]">
-            Shelley Chen
+            <Link href="/">Shelley Chen</Link>
           </h1>
           <nav className="flex gap-6 items-center justify-center">
-            <button className="md:order-1 md:ml-2 cursor-pointer">
-              <Image
-                width={26}
-                height={26}
-                onClick={onModeChange}
-                className={isDark ? "invert" : ""}
-                src={isDark ? CloudMoon : CloudSun}
-                alt="A CloudSun icon"
-              />
-            </button>
-            <button onClick={handleMenuClick} className="md:hidden">
-              <Image
-                width={32}
-                height={32}
-                className={isDark ? "invert" : ""}
-                src={List}
-                alt="A List icon"
-              />
-            </button>
-            <ul className="hidden md:flex xl:gap-10 gap-6 items-center justify-center">
-              <li>
-                <a href="#" onClick={(e) => handleScroll(e, "aboutSection")}>
-                  About Me
-                </a>
-              </li>
-              <li>Projects</li>
-              <li>Skills</li>
-              <li>Experience</li>
-              <li>Contact</li>
-              <li>Others</li>
+            <div className="buttonBox flex justify-center items-center md:order-1">
+              <button>
+                <Image
+                  width={26}
+                  height={26}
+                  onClick={onModeChange}
+                  className={isDark ? "invert" : ""}
+                  src={isDark ? CloudMoon : CloudSun}
+                  alt="A CloudSun icon"
+                />
+              </button>
+            </div>
+            {isMenuOpen ? (
+              <div className="buttonBox flex justify-center items-center md:hidden">
+                <button onClick={handleMenuClose}>
+                  <Image
+                    width={32}
+                    height={32}
+                    className={isDark ? "invert" : ""}
+                    src={iconX}
+                    alt="A close icon"
+                  />
+                </button>
+              </div>
+            ) : (
+              <div className="buttonBox flex justify-center items-center md:hidden">
+                <button onClick={handleMenuClick}>
+                  <Image
+                    width={32}
+                    height={32}
+                    className={isDark ? "invert" : ""}
+                    src={iconList}
+                    alt="A List icon"
+                  />
+                </button>
+              </div>
+            )}
+            <ul className="menuList hidden gap-2 md:flex xl:gap-0 items-center justify-center">
+              {menuList.map((item, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
+                >
+                  <a
+                    href="#"
+                    onClick={(e) => handleScroll(e, item.link)}
+                    className="color-transition block px-4 py-1 rounded-full"
+                  >
+                    {item.title}
+                  </a>
+                </motion.li>
+              ))}
             </ul>
           </nav>
         </div>
-      </header>
-      <div
-        className="fixed top-15 z-50 w-full bg-[var(--background-secondary)]"
-        style={{
-          clipPath: isMenuOpen ? "inset(0 0 0 0)" : "inset(0 0 100% 0)",
-        }}
-      >
-        <ul className="py-5 flex flex-col gap-4 items-center justify-center">
-          <li>
-            <a href="#" onClick={(e) => handleScroll(e, "aboutSection")}>
-              About Me
-            </a>
-          </li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Experience</li>
-          <li>Contact</li>
-          <li>Others</li>
-        </ul>
-      </div>
+        <div
+          className="relative clip-transition color-transition mobileMenu z-50 w-full"
+          style={{
+            clipPath: isMenuOpen ? "inset(0 0 0 0)" : "inset(0 0 100% 0)",
+          }}
+        >
+          <ul className="py-5 flex flex-col gap-4 items-center justify-center">
+            {menuList.map((item, index) => (
+              <li key={index}>
+                <a href="#" onClick={(e) => handleScroll(e, item.link)}>
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </motion.header>
     </>
   );
 }

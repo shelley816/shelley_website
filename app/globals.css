@@ -32,3 +32,29 @@ body {
   color: var(--foreground);
   font-family: sans-serif, Arial, Helvetica;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .buttonBox:hover button {
+    cursor: pointer;
+    transform: translateY(-15%);
+  }
+  .menuList li:hover a {
+    @apply bg-white/30;
+  }
+}
+
+.buttonBox button {
+  transition: transform 200ms ease;
+}
+
+.color-transition {
+  transition: background-color 300ms ease;
+}
+
+.clip-transition {
+  transition: clip-path 200ms ease-in;
+}
+
+.menuList li a {
+  @apply bg-white/0;
+}
