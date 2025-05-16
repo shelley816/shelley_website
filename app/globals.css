@@ -58,3 +58,10 @@ body {
 .menuList li a {
   @apply bg-white/0;
 }
+
+/* Hero slogan animation */
+.animations-wrapper span {
+  display: inline-block;
+  animation: reveal 1.3s cubic-bezier(0.19, 1, 0.22, 1) backwards;
+  animation-delay: calc(0.05s * var(--charIndex));
+}

@@ -52,7 +52,7 @@ export default function Header({ onModeChange, isDark }) {
   return (
     <>
       <motion.header
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
         className={`color-transition fixed z-50 w-full ${
@@ -62,7 +62,7 @@ export default function Header({ onModeChange, isDark }) {
         }`}
       >
         <div className="w-11/12 h-15 mx-auto flex gap-4 items-center justify-between">
-          <h1 className="font-[family-name:var(--font-poppins)] font-[600]">
+          <h1 className="text-xl font-[family-name:var(--font-poppins)] font-[600]">
             <Link href="/">Shelley Chen</Link>
           </h1>
           <nav className="flex gap-6 items-center justify-center">
@@ -107,14 +107,14 @@ export default function Header({ onModeChange, isDark }) {
               {menuList.map((item, index) => (
                 <motion.li
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.3 }}
                 >
                   <a
                     href="#"
                     onClick={(e) => handleScroll(e, item.link)}
-                    className="color-transition block px-4 py-1 rounded-full"
+                    className="color-transition block md:px-2 xl:px-5 py-1 rounded-full"
                   >
                     {item.title}
                   </a>
