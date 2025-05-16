@@ -16,7 +16,7 @@ export default function Hero() {
       setCurrentSloganIndex((prevIndex) =>
         prevIndex < sloganText.length - 1 ? prevIndex + 1 : 0
       );
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);

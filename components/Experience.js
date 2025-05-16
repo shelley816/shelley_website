@@ -3,7 +3,7 @@ import Wrap from "./ui/Wrap";
 export default function Experience() {
   return (
     <>
-      <Wrap title="Experience" areaLink="experienceSection">
+      <Wrap areaLink="experienceSection">
         Content.....
       </Wrap>
     </>
