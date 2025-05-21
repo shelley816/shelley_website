@@ -86,7 +86,7 @@ function ActiveCard({ activeCard, setActiveCard }) {
     <motion.div
       ref={ref}
       layoutId={`card-${activeCard.id}`}
-      className={`card card-active`}
+      className={`card card-active md:max-h-160`}
       style={{ borderRadius: 0 }}
     >
       <div className="card-inner">
@@ -148,7 +148,7 @@ function ActiveCard({ activeCard, setActiveCard }) {
       <div className="px-4 py-2 flex-1">
         {activeCard.longDescription.map((item) => (
           <div key={item.title}>
-            <h4 className="text-lg font-bold mt-4 mb-2">{item.title}</h4>
+            <h4 className="text-lg font-bold mt-2 mb-2">{item.title}</h4>
 
             {item.type === "text" &&
               item.content.map((paragraph, index) => (
@@ -253,12 +253,12 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
     <motion.div
       ref={ref}
       layoutId={`smCard-${activeCardSmall.id}`}
-      className={`smallCard card-active`}
+      className={`smallCard card-active md:max-h-110`}
       style={{ borderRadius: 0 }}
     >
       <motion.div
         layoutId={`smInner-${activeCardSmall.id}`}
-        className="p-3 flex flex-col justify-start items-start"
+        className="p-3 pb-0 flex justify-start items-end"
       >
         <motion.img
           layoutId={`smImage-${activeCardSmall.id}`}
@@ -285,7 +285,10 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
           />
         </motion.button>
 
-        <motion.div layoutId={`smCard-content-${activeCardSmall.id}`}>
+        <motion.div
+          layoutId={`smCard-content-${activeCardSmall.id}`}
+          className="ml-3"
+        >
           <div className="card-text">
             <motion.h2
               layoutId={`smCard-heading-${activeCardSmall.id}`}
@@ -318,7 +321,7 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
       <div className="px-4 py-2 flex-1">
         {activeCardSmall.longDescription.map((item) => (
           <div key={item.title}>
-            <h4 className="text-lg font-bold mt-4 mb-2">{item.title}</h4>
+            <h4 className="text-lg font-bold mt-2 mb-2">{item.title}</h4>
 
             {item.type === "text" &&
               item.content.map((paragraph, index) => (
@@ -467,7 +470,11 @@ const CARDS = [
       { sort: "React", bgClass: "bg-gray-500", textColor: "text-white" },
       { sort: "Next.js", bgClass: "bg-gray-200", textColor: "text-black" },
       { sort: "Tailwind CSS", bgClass: "bg-blue-600", textColor: "text-white" },
-      { sort: "Framer Motion", bgClass: "bg-[#F8ED2E]", textColor: "text-black" },
+      {
+        sort: "Framer Motion",
+        bgClass: "bg-[#F8ED2E]",
+        textColor: "text-black",
+      },
       { sort: "Vercel", bgClass: "bg-black", textColor: "text-white" },
     ],
     longDescription: [
