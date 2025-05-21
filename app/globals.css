@@ -83,7 +83,7 @@ body {
 }
 /* Projects */
 .card {
-  @apply relative w-full h-78 rounded-lg overflow-hidden my-auto mx-0 cursor-pointer outline-0 select-none;
+  @apply relative w-full max-w-110 md:max-w-full h-78 rounded-lg overflow-hidden my-auto mx-0 cursor-pointer outline-0 select-none;
 }
 .card > img {
   @apply absolute w-auto h-full object-cover inset-0;
