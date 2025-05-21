@@ -19,6 +19,18 @@
   --font-poppins: var(--font-poppins);
 }
 
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--foreground)]/50 rounded-sm border-2 border-transparent bg-clip-content;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #161616;
@@ -68,4 +80,65 @@ body {
 /* About */
 .photoWrap img {
   transition: opacity 200ms ease;
+}
+/* Projects */
+.card {
+  @apply relative w-full h-78 rounded-lg overflow-hidden my-auto mx-0 cursor-pointer outline-0 select-none;
+}
+.card > img {
+  @apply absolute w-auto h-full object-cover inset-0;
+}
+
+.close-button {
+  @apply absolute top-4 right-4 h-8 w-8 rounded-full backdrop-blur-xs flex justify-center items-center cursor-pointer bg-[var(--background-secondary)]/60;
+}
+
+.card-content {
+  @apply absolute bottom-0 left-0 right-0;
+}
+
+.card-content .card-text {
+  @apply pt-0 pr-4 pb-3;
+}
+
+.card-heading {
+  @apply mb-1 pl-4 text-4xl/8 font-bold max-w-40 text-left uppercase text-[var(--background-secondary)];
+}
+
+.extra-info {
+  @apply relative w-full py-3 px-4 backdrop-blur-sm bg-[var(--background-secondary)]/60;
+}
+
+.extra-info > h3 {
+  @apply mb-3 text-lg font-medium;
+}
+
+/* popover */
+.card-inner {
+  @apply relative w-full h-100;
+}
+
+.card-inner > img {
+  @apply w-full h-full object-cover;
+}
+
+.card-active {
+  @apply absolute top-0 md:top-auto z-81 w-full max-w-120 h-full md:h-160 m-0 md:mx-auto flex flex-col rounded-none md:rounded-lg overflow-scroll bg-[var(--background-secondary)]! cursor-default;
+}
+
+/* smallCard */
+.smallCardWrap {
+  @apply w-full h-full rounded-md flex flex-col justify-between overflow-hidden bg-center bg-no-repeat bg-cover;
+}
+
+.smallCard {
+  @apply relative bg-[var(--background-secondary)]/60 cursor-pointer outline-0 select-none;
+}
+
+.smallCard div > img {
+  @apply relative object-cover;
+}
+
+.smallCard-content .Card-text {
+  @apply pt-0 pr-4 pb-3;
 }

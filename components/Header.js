@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react"
 
 import Image from "next/image";
 import CloudSun from "../assets/CloudSun.svg";
@@ -38,7 +38,7 @@ export default function Header({ onModeChange, isDark }) {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 1024) {
         setIsMenuOpen(false);
       }
     };
@@ -66,7 +66,7 @@ export default function Header({ onModeChange, isDark }) {
             <Link href="/">Shelley Chen</Link>
           </h1>
           <nav className="flex gap-6 items-center justify-center">
-            <div className="buttonBox flex justify-center items-center md:order-1">
+            <div className="buttonBox flex justify-center items-center lg:order-1">
               <button>
                 <Image
                   width={26}
@@ -79,7 +79,7 @@ export default function Header({ onModeChange, isDark }) {
               </button>
             </div>
             {isMenuOpen ? (
-              <div className="buttonBox flex justify-center items-center md:hidden">
+              <div className="buttonBox flex justify-center items-center lg:hidden">
                 <button onClick={handleMenuClose}>
                   <Image
                     width={32}
@@ -91,7 +91,7 @@ export default function Header({ onModeChange, isDark }) {
                 </button>
               </div>
             ) : (
-              <div className="buttonBox flex justify-center items-center md:hidden">
+              <div className="buttonBox flex justify-center items-center lg:hidden">
                 <button onClick={handleMenuClick}>
                   <Image
                     width={32}
@@ -103,7 +103,7 @@ export default function Header({ onModeChange, isDark }) {
                 </button>
               </div>
             )}
-            <ul className="menuList hidden gap-2 md:flex xl:gap-0 items-center justify-center">
+            <ul className="menuList hidden gap-2 lg:flex lg:gap-0 items-center justify-center">
               {menuList.map((item, index) => (
                 <motion.li
                   key={index}
@@ -114,7 +114,7 @@ export default function Header({ onModeChange, isDark }) {
                   <a
                     href="#"
                     onClick={(e) => handleScroll(e, item.link)}
-                    className="color-transition block md:px-2 xl:px-5 py-1 rounded-full"
+                    className="color-transition block md:px-2 lg:px-5 py-1 rounded-full"
                   >
                     {item.title}
                   </a>
@@ -127,6 +127,7 @@ export default function Header({ onModeChange, isDark }) {
           className="relative clip-transition color-transition mobileMenu z-50 w-full"
           style={{
             clipPath: isMenuOpen ? "inset(0 0 0 0)" : "inset(0 0 100% 0)",
+            height: isMenuOpen ? "auto" : "0",
           }}
         >
           <ul className="py-5 flex flex-col gap-4 items-center justify-center">

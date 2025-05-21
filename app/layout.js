@@ -1,6 +1,7 @@
-import "./globals.css";
-
+import { ThemeProvider } from "@/components/store/ThemeContext";
 import HtmlContainer from "@/components/HtmlContainer";
+
+import "./globals.css";
 
 export const metadata = {
   title: "Shelley Chen",
@@ -13,7 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="zh-Hant-TW">
-      <HtmlContainer>{children}</HtmlContainer>
+      <ThemeProvider>
+        <HtmlContainer>{children}</HtmlContainer>
+      </ThemeProvider>
     </html>
   );
 }

@@ -25,18 +25,18 @@ export default function Hero() {
     <>
       <div
         id="heroSection"
-        className="w-full h-screen flex justify-center items-center"
+        className="relative w-full h-screen flex justify-center items-center"
       >
         <motion.div
           style={{ opacity: opacitySlogan }}
-          className="size-90 md:size-110 rounded-full flex flex-col justify-center items-center bg-[var(--background-secondary)]/70"
+          className="z-10 size-90 md:size-110 rounded-full flex flex-col justify-center items-center bg-[var(--background-secondary)]/70"
         >
           <div className="relative w-full h-full flex flex-col justify-center items-center">
             {sloganText.map((text, index) => (
               <h2
                 key={index}
                 className={`absolute text-4xl md:text-5xl -mt-15 md:-mt-18 opacity-0 font-[family-name:var(--font-poppins)] transition-opacity duration-500 ease-in-out ${
-                  index === currentSloganIndex ? "z-1 opacity-100" : ""
+                  index === currentSloganIndex ? "opacity-100" : ""
                 }`}
               >
                 <div className="animations-wrapper">

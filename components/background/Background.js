@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "motion/react"
 
 const circleNo1 =
   "absolute rounded-full bg-radial-[at_30%_30%] from-[#C5D9D7]/30 via-[#DABB9F]/30 to-[#7ABEC2]/30 to-90% contrast-125 backdrop-blur-xl";
@@ -67,7 +67,7 @@ export default function Background({ bodyHeight, isDark }) {
           ></motion.div>
           <motion.div
             style={{ y: circleNo3ScrollY, x: circleNo3ScrollX }}
-            className={`${circleNo3} top-160 md:top-220 lg:top-180 left-[5%] lg:left-[20%] size-120 md:size-180 lg:size-120`}
+            className={`${circleNo3} top-160 md:top-220 lg:top-170 left-[5%] lg:left-[20%] size-120 md:size-180 lg:size-120`}
           ></motion.div>
         </div>
       )}
