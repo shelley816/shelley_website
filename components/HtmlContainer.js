@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/components/store/ThemeContext";
+import { useTheme } from "@/components/store/Context";
 
 import Header from "@/components/Header";
 import Background from "./background/Background";

@@ -3,7 +3,9 @@
 import { createContext, useContext, useRef, useState, useEffect } from "react";
 import { Poppins } from "next/font/google";
 
-const ThemeContext = createContext();
+import { CARDS } from "./Cards";
+
+const ContextData = createContext();
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -11,7 +13,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-export function ThemeProvider({ children }) {
+export function ContextProvider({ children }) {
   const [isDark, setIsDark] = useState(false);
   const elementRef = useRef(null);
   const [bodyHeight, setBodyHeight] = useState(0);
@@ -25,14 +27,14 @@ export function ThemeProvider({ children }) {
   }, [isDark]);
 
   return (
-    <ThemeContext.Provider
-      value={{ isDark, handleModeChange, elementRef, bodyHeight, poppins }}
+    <ContextData.Provider
+      value={{ isDark, handleModeChange, elementRef, bodyHeight, poppins, CARDS }}
     >
       {children}
-    </ThemeContext.Provider>
+    </ContextData.Provider>
   );
 }
 
 export function useTheme() {
-  return useContext(ThemeContext);
+  return useContext(ContextData);
 }

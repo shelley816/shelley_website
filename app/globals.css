@@ -22,11 +22,12 @@
 ::-webkit-scrollbar {
   @apply w-2 h-2;
 }
-
 ::-webkit-scrollbar-track {
   @apply bg-transparent;
 }
-
+::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}
 ::-webkit-scrollbar-thumb {
   @apply bg-[var(--foreground)]/50 rounded-sm border-2 border-transparent bg-clip-content;
 }
@@ -123,7 +124,7 @@ body {
 }
 
 .card-active {
-  @apply absolute top-0 md:top-auto z-81 w-full max-w-130 h-full m-0 md:mx-auto flex flex-col rounded-none md:rounded-lg overflow-scroll bg-[var(--background-secondary)]! cursor-default;
+  @apply absolute top-0 md:top-auto z-81 w-full max-w-130 h-full m-0 md:mx-auto flex flex-col rounded-none md:rounded-lg overflow-scroll bg-[var(--background-secondary)]! cursor-default!;
 }
 
 /* smallCard */

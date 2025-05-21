@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@/components/store/ThemeContext";
+import { ContextProvider } from "@/components/store/Context";
 import HtmlContainer from "@/components/HtmlContainer";
 
 import "./globals.css";
@@ -14,9 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="zh-Hant-TW">
-      <ThemeProvider>
+      <ContextProvider>
         <HtmlContainer>{children}</HtmlContainer>
-      </ThemeProvider>
+      </ContextProvider>
     </html>
   );
 }
