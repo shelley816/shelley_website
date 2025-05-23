@@ -52,7 +52,7 @@ export default function Background({ bodyHeight, isDark }) {
     <>
       {bodyHeight > 0 && (
         <div
-          className={`absolute w-full z-0 bg-top bg-no-repeat bg-[length:100vw_auto] overflow-hidden bg-[url(../assets/bg.jpg)] md:bg-[url(../assets/bg_md.jpg)] xl:bg-[url(../assets/bg_xl.jpg)] ${
+          className={`absolute w-full z-0 bg-top bg-no-repeat bg-[length:100vw_auto] overflow-hidden bg-[url(../assets/bg.png)] md:bg-[url(../assets/bg_md.png)] xl:bg-[url(../assets/bg_xl.png)] ${
             isDark && "invert opacity-20"
           }`}
           style={{ height: `${bodyHeight}px` }}

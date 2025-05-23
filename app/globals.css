@@ -143,3 +143,22 @@ body {
 .smallCard-content .Card-text {
   @apply pt-0 pr-4 pb-3;
 }
+/* Skills */
+.skills-wrapper {
+  @apply w-full p-8 rounded-md bg-[var(--background-secondary)]/60;
+}
+.skills-wrapper h3 {
+  @apply text-lg mb-4 font-medium;
+}
+.skills-wrapper ul {
+  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3;
+}
+.skills-wrapper ul li > p {
+  @apply flex justify-between items-center mb-2;
+}
+.level-bar {
+  @apply w-full h-2 bg-[#c6d8da] rounded-full;
+}
+.level-bar > div {
+  @apply h-2 bg-[#00BCCF] rounded-full;
+}

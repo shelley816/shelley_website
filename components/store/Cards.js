@@ -8,11 +8,11 @@ export const CARDS = [
     link: "https://homestay-pottery-3087e.web.app/",
     logo: undefined, // 暫時無圖片
     label: [
-      { sort: "React", bgClass: "bg-gray-500", textColor: "text-white" },
-      { sort: "Redux", bgClass: "bg-purple-500", textColor: "text-white" },
-      { sort: "React Router", bgClass: "bg-red-500", textColor: "text-white" },
-      { sort: "Tailwind CSS", bgClass: "bg-blue-600", textColor: "text-white" },
-      { sort: "Firebase", bgClass: "bg-orange-500", textColor: "text-white" },
+      { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
+      { sort: "Redux", bgClass: "bg-purple-100", textColor: "text-purple-800" },
+      { sort: "React Router", bgClass: "bg-rose-100", textColor: "text-rose-800" },
+      { sort: "Tailwind CSS", bgClass: "bg-blue-100", textColor: "text-blue-800" },
+      { sort: "Firebase", bgClass: "bg-amber-100", textColor: "text-amber-800" },
     ],
     longDescription: [
       {
@@ -52,15 +52,11 @@ export const CARDS = [
     link: undefined,
     logo: undefined, // 暫時無圖片
     label: [
-      { sort: "React", bgClass: "bg-gray-500", textColor: "text-white" },
-      { sort: "Next.js", bgClass: "bg-gray-300", textColor: "text-black" },
-      { sort: "Tailwind CSS", bgClass: "bg-blue-600", textColor: "text-white" },
-      {
-        sort: "Framer Motion",
-        bgClass: "bg-[#F8ED2E]",
-        textColor: "text-black",
-      },
-      { sort: "Vercel", bgClass: "bg-black", textColor: "text-white" },
+      { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
+      { sort: "Next.js", bgClass: "bg-zinc-300", textColor: "text-zinc-900" },
+      { sort: "Tailwind CSS", bgClass: "bg-blue-100", textColor: "text-blue-800" },
+      { sort: "Framer Motion", bgClass: "bg-yellow-100", textColor: "text-yellow-800" },
+      { sort: "Vercel", bgClass: "bg-neutral-300", textColor: "text-neutral-900" },
     ],
     longDescription: [
       {
@@ -100,8 +96,8 @@ export const CARDS = [
     link: undefined,
     logo: undefined, // 暫時無圖片
     label: [
-      { sort: "React", bgClass: "bg-gray-500", textColor: "text-white" },
-      { sort: "Next.js", bgClass: "bg-gray-200", textColor: "text-black" },
+      { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
+      { sort: "Next.js", bgClass: "bg-zinc-300", textColor: "text-zinc-900" },
     ],
     longDescription: [
       {
@@ -123,8 +119,8 @@ export const CARDS = [
     link: "https://www.google.com/",
     logo: undefined, // 暫時無圖片
     label: [
-      { sort: "React", bgClass: "bg-gray-500", textColor: "text-white" },
-      { sort: "Next.js", bgClass: "bg-gray-200", textColor: "text-black" },
+      { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
+      { sort: "Next.js", bgClass: "bg-zinc-300", textColor: "text-zinc-900" },
     ],
     longDescription: [
       {
@@ -146,9 +142,9 @@ export const CARDS = [
     link: undefined,
     logo: undefined, // 暫時無圖片
     label: [
-      { sort: "Git", bgClass: "bg-black", textColor: "text-white" },
-      { sort: "JavaScript", bgClass: "bg-amber-500", textColor: "text-black" },
-      { sort: "React", bgClass: "bg-gray-500", textColor: "text-white" },
+      { sort: "Git", bgClass: "bg-orange-100", textColor: "text-orange-800" },
+      { sort: "JavaScript", bgClass: "bg-amber-100", textColor: "text-amber-800" },
+      { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
     ],
     longDescription: [
       {

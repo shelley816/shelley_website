@@ -4,6 +4,7 @@ import { createContext, useContext, useRef, useState, useEffect } from "react";
 import { Poppins } from "next/font/google";
 
 import { CARDS } from "./Cards";
+import { skills } from "./Skills";
 
 const ContextData = createContext();
 
@@ -28,7 +29,7 @@ export function ContextProvider({ children }) {
 
   return (
     <ContextData.Provider
-      value={{ isDark, handleModeChange, elementRef, bodyHeight, poppins, CARDS }}
+      value={{ isDark, handleModeChange, elementRef, bodyHeight, poppins, CARDS, skills }}
     >
       {children}
     </ContextData.Provider>

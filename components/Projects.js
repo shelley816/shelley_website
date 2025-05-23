@@ -49,7 +49,7 @@ function Card({ card, setActiveCard }) {
             {card.label.map((label, labelIndex) => (
               <span
                 key={labelIndex}
-                className={`text-xs/6 rounded-full px-[10px] font-medium whitespace-nowrap ${label.textColor} ${label.bgClass}`}
+                className={`border border-current text-xs/6 rounded-full px-[10px] font-medium whitespace-nowrap ${label.textColor} ${label.bgClass}`}
               >
                 {label.sort}
               </span>
@@ -121,7 +121,7 @@ function ActiveCard({ activeCard, setActiveCard }) {
               {activeCard.label.map((label, labelIndex) => (
                 <span
                   key={labelIndex}
-                  className={`text-xs/6 rounded-full px-[10px] font-medium whitespace-nowrap ${label.textColor} ${label.bgClass}`}
+                  className={`border border-current text-xs/6 rounded-full px-[10px] font-medium whitespace-nowrap ${label.textColor} ${label.bgClass}`}
                 >
                   {label.sort}
                 </span>
@@ -218,7 +218,7 @@ function SmallCard({ card, setActiveCardSmall }) {
               {card.label.map((label, labelIndex) => (
                 <span
                   key={labelIndex}
-                  className={`text-xs/6 rounded-full px-[10px] font-medium whitespace-nowrap ${label.textColor} ${label.bgClass}`}
+                  className={`border border-current text-xs/6 rounded-full px-[10px] font-medium whitespace-nowrap ${label.textColor} ${label.bgClass}`}
                 >
                   {label.sort}
                 </span>
@@ -316,7 +316,7 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
               {activeCardSmall.label.map((label, labelIndex) => (
                 <span
                   key={labelIndex}
-                  className={`text-xs/6 rounded-full px-[10px] font-medium whitespace-nowrap ${label.textColor} ${label.bgClass}`}
+                  className={`border border-current text-xs/6 rounded-full px-[10px] font-medium whitespace-nowrap ${label.textColor} ${label.bgClass}`}
                 >
                   {label.sort}
                 </span>
