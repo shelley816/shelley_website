@@ -162,3 +162,20 @@ body {
 .level-bar > div {
   @apply h-2 bg-[#00BCCF] rounded-full;
 }
+/* Experience */
+.ex-wrapper {
+  @apply w-full p-4 rounded-md bg-[var(--background-secondary)]/60;
+}
+
+.ex-wrapper ul li {
+  @apply w-full p-4 flex flex-col md:flex-row;
+}
+.ex-wrapper ul li .date {
+  @apply w-full md:w-3/10 text-lg text-center md:text-left mb-2 font-medium;
+}
+.ex-wrapper ul li .detail {
+  @apply w-full md:w-7/10 text-base/8;
+}
+.ex-wrapper ul li .detail > span {
+  @apply underline decoration-2 underline-offset-4 decoration-[#00BCCF];
+}
