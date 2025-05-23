@@ -4,10 +4,8 @@ export default function Experience() {
   return (
     <>
       <Wrap areaLink="experienceSection">
-        <div className="w-full h-auto md:h-screen px-5 flex flex-col justify-center items-center">
-          <h2 className="text-2xl mt-20 md:mt-0 md:text-3xl text-center">
-            Experience
-          </h2>
+        <div className="outer-wrapper">
+          <h2>Experience</h2>
           <div className="w-11/12 max-w-110 md:max-w-full lg:w-9/12 mt-10 flex flex-col items-center gap-10">
             <div className="ex-wrapper">
               <ul>

@@ -8,8 +8,8 @@ export default function About() {
   return (
     <>
       <Wrap areaLink="aboutSection">
-        <div className="w-full h-screen px-5 flex flex-col justify-center items-center">
-          <h2 className="text-2xl md:text-3xl text-center">About me</h2>
+        <div className="outer-wrapper">
+          <h2>About me</h2>
           <div className="relative w-11/12 md:w-8/12 mt-10 mx-auto">
             <div className={`photoWrap relative float-left mr-4 mb-2 lg:mr-6 ${photoCss}`}>
               <Image

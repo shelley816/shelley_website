@@ -388,10 +388,8 @@ export default function Projects() {
   return (
     <>
       <Wrap areaLink="projectsSection">
-        <div className="w-full h-auto md:h-screen px-5 flex flex-col justify-center items-center">
-          <h2 className="text-2xl mt-20 md:mt-0 md:text-3xl text-center">
-            Projects
-          </h2>
+        <div className="outer-wrapper">
+          <h2>Projects</h2>
           <div className="w-11/12 mt-10 flex flex-col items-center gap-10 md:grid md:grid-cols-2 lg:grid-cols-3">
             {CARDS.slice(0, 2).map((card) => (
               <Card key={card.id} card={card} setActiveCard={setActiveCard} />

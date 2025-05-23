@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 
 import { CARDS } from "./Cards";
 import { skills } from "./Skills";
+import { sharePhoto } from "./Photo";
 
 const ContextData = createContext();
 
@@ -29,7 +30,7 @@ export function ContextProvider({ children }) {
 
   return (
     <ContextData.Provider
-      value={{ isDark, handleModeChange, elementRef, bodyHeight, poppins, CARDS, skills }}
+      value={{ isDark, handleModeChange, elementRef, bodyHeight, poppins, CARDS, skills, sharePhoto }}
     >
       {children}
     </ContextData.Provider>

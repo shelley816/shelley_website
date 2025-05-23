@@ -40,8 +40,8 @@ export default function Skills() {
   return (
     <>
       <Wrap areaLink="skillsSection">
-        <div className="w-full h-auto md:h-screen px-5 flex flex-col justify-center items-center">
-          <h2 className="text-2xl mt-20 md:mt-0 md:text-3xl text-center">
+        <div className="outer-wrapper">
+          <h2>
             Skills
             <span className="block text-base mt-2">顯示比例依工具熟練度調整，越熟悉的工具數值越高</span>
           </h2>

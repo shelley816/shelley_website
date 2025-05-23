@@ -38,17 +38,15 @@ export default function Contact() {
   return (
     <>
       <Wrap areaLink="contactSection">
-        <div className="w-full h-auto md:h-screen px-5 flex flex-col justify-center items-center">
-          <h2 className="text-2xl mt-20 md:mt-0 md:text-3xl text-center">
-            Contact
-          </h2>
+        <div className="outer-wrapper">
+          <h2>Contact</h2>
           <div className="w-11/12 max-w-110 md:max-w-full lg:w-9/12 mt-10 flex flex-col items-center gap-10">
             <div className="contact-wrapper">
               <ul>
                 <li>
                   <a
                     target="_blank"
-                    href="https://www.linkedin.com/in/shelley-chen-a4b0a81a0/"
+                    href="https://www.linkedin.com/in/syuanli-chen-b3ab84119?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                     className="hover:underline decoration-2 underline-offset-4 decoration-[#00BCCF]"
                   >
                     LinkedIn

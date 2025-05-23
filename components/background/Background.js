@@ -30,18 +30,18 @@ export default function Background({ bodyHeight, isDark }) {
 
   const rawX1 = useTransform(
     scrollY,
-    [0, 800, 1600, 2400, 3200, 4000, 4800, 5600],
-    [0, toX80, 0, toX90, 0, toX80, 0, toX90]
+    [0, 800, 1700, 2500, 3200, 4000, 4800],
+    [0, toX90, 0, toX80, 0, toX90, 0]
   );
   const rawX2 = useTransform(
     scrollY,
-    [0, 800, 1600, 2400, 3200, 4000, 4800, 5600],
-    [0, toX90n, 0, toX90n, 0, toX90n, 0, toX90n]
+    [0, 800, 1700, 2500, 3200, 4000, 4800],
+    [0, toX90n, 0, toX90n, 0, toX90n, 0]
   );
   const rawX3 = useTransform(
     scrollY,
-    [0, 800, 1600, 2400, 3200, 4000, 4800, 5600],
-    [0, toX50, 0, toX50, 0, toX50, 0, toX50]
+    [0, 800, 1700, 2500, 3200, 4000, 4800],
+    [0, toX50, 0, toX50, 0, toX50, 0]
   );
 
   const circleNo1ScrollX = useSpring(rawX1, { stiffness: 30, damping: 25 });
