@@ -179,3 +179,22 @@ body {
 .ex-wrapper ul li .detail > span {
   @apply underline decoration-2 underline-offset-4 decoration-[#00BCCF];
 }
+/* Contact */
+.contact-wrapper {
+  @apply w-full p-4 rounded-md flex flex-col justify-center items-center bg-[var(--background-secondary)]/60;
+}
+.contact-wrapper ul {
+  @apply w-full md:w-6/10 flex flex-col gap-5 md:flex-row mt-4;
+}
+.contact-wrapper ul li {
+  @apply w-full md:w-6/10 flex justify-center items-center;
+}
+.blue-button {
+  @apply relative w-8 h-8 overflow-hidden hover:cursor-pointer;
+}
+.blue-button span {
+  @apply w-full flex justify-center items-center;
+}
+.contact-wrapper > p {
+  @apply max-w-155 text-base/8 text-left md:text-center mx-4 my-8;
+}
