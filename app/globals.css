@@ -47,7 +47,7 @@ body {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .buttonBox:hover button {
+  .buttonBox:hover button, .buttonBox:hover a {
     cursor: pointer;
     transform: translateY(-15%);
   }
@@ -56,7 +56,7 @@ body {
   }
 }
 
-.buttonBox button {
+.buttonBox button, .buttonBox a {
   transition: transform 200ms ease;
 }
 
@@ -124,16 +124,16 @@ body {
 }
 
 .card-active {
-  @apply absolute top-0 md:top-auto z-81 w-full max-w-130 h-full m-0 md:mx-auto flex flex-col rounded-none md:rounded-lg overflow-scroll bg-[var(--background-secondary)]! cursor-default!;
+  @apply absolute top-0 md:top-auto z-81 w-full max-w-130 h-full m-0 md:mx-auto flex flex-col justify-start rounded-none md:rounded-lg overflow-scroll bg-[var(--background-secondary)]! cursor-default!;
 }
 
 /* smallCard */
 .smallCardWrap {
-  @apply w-full h-full rounded-md flex flex-col justify-between overflow-hidden bg-center bg-no-repeat bg-cover;
+  @apply w-full max-w-110 md:max-w-full grid grid-cols-1 md:grid-cols-3 md:col-span-2 lg:grid-cols-1 lg:col-span-1 gap-4;
 }
 
 .smallCard {
-  @apply relative bg-[var(--background-secondary)]/60 cursor-pointer outline-0 select-none;
+  @apply flex justify-start bg-[var(--background-secondary)]/60 cursor-pointer outline-0 select-none;
 }
 
 .smallCard div > img {

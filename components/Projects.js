@@ -9,14 +9,12 @@ import { useOnClickOutside } from "usehooks-ts";
 
 import Wrap from "./ui/Wrap";
 import iconX_noBg from "../assets/X_noBg.svg";
-import iconLink from "../assets/ArrowUpRight.svg";
+import iconLink from "../assets/Link.svg";
 
 const projectPopover =
   "fixed top-0 left-0 z-80 w-full h-full flex justify-center items-center bg-[var(--background)]/80";
 
 function Card({ card, setActiveCard }) {
-  const { isDark } = useTheme();
-
   return (
     <motion.div
       layoutId={`card-${card.id}`}
@@ -31,21 +29,6 @@ function Card({ card, setActiveCard }) {
         alt={card.title}
         style={{ borderRadius: 8 }}
       />
-      <motion.button
-        aria-hidden
-        tabIndex={-1}
-        layoutId={`close-button-${card.id}`}
-        className="close-button"
-        style={{ opacity: 0 }}
-      >
-        <Image
-          width={32}
-          height={32}
-          className={isDark ? "invert" : ""}
-          src={iconX_noBg}
-          alt="close icon"
-        />
-      </motion.button>
 
       <motion.div layoutId={`card-content-${card.id}`} className="card-content">
         <div className="card-text">
@@ -97,20 +80,22 @@ function ActiveCard({ activeCard, setActiveCard }) {
           alt={activeCard.title}
           style={{ borderRadius: 0 }}
         />
-        <motion.button
-          layoutId={`close-button-${activeCard.title}`}
-          className="close-button"
-          aria-label="Close button"
-          onClick={() => setActiveCard(null)}
-        >
-          <Image
-            width={32}
-            height={32}
-            className={isDark ? "invert" : ""}
-            src={iconX_noBg}
-            alt="close icon"
-          />
-        </motion.button>
+
+        <div className="buttonBox flex justify-center items-center">
+          <button
+            className="close-button"
+            aria-label="Close button"
+            onClick={() => setActiveCard(null)}
+          >
+            <Image
+              width={32}
+              height={32}
+              className={isDark ? "invert" : ""}
+              src={iconX_noBg}
+              alt="close icon"
+            />
+          </button>
+        </div>
 
         <motion.div
           layoutId={`card-content-${activeCard.id}`}
@@ -142,20 +127,22 @@ function ActiveCard({ activeCard, setActiveCard }) {
                 </span>
               ))}
               {activeCard.link ? (
-                <a
-                  className="absolute top-2 right-4 h-8 w-8 flex justify-center items-center cursor-pointer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={activeCard.link}
-                >
-                  <Image
-                    width={32}
-                    height={32}
-                    className={isDark ? "invert" : ""}
-                    src={iconLink}
-                    alt="link icon"
-                  />
-                </a>
+                <div className="buttonBox">
+                  <a
+                    className="absolute top-2 right-4 h-8 w-8 flex justify-center items-center cursor-pointer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={activeCard.link}
+                  >
+                    <Image
+                      width={32}
+                      height={32}
+                      className={isDark ? "invert" : ""}
+                      src={iconLink}
+                      alt="link icon"
+                    />
+                  </a>
+                </div>
               ) : null}
             </div>
           </motion.div>
@@ -175,7 +162,7 @@ function ActiveCard({ activeCard, setActiveCard }) {
               ))}
 
             {item.type === "list" && (
-              <ul className="list-disc pl-5 space-y-1">
+              <ul className="list-disc pl-5">
                 {item.content.map((text, index) => (
                   <li key={index}>{text}</li>
                 ))}
@@ -189,15 +176,13 @@ function ActiveCard({ activeCard, setActiveCard }) {
 }
 
 function SmallCard({ card, setActiveCardSmall }) {
-  const { isDark } = useTheme();
-
   return (
     <motion.div
       layoutId={`smCard-${card.id}`}
       className="smallCard"
       whileTap={{ scale: 0.98 }}
       onClick={() => setActiveCardSmall(card)}
-      style={{ borderRadius: 0 }}
+      style={{ borderRadius: 8 }}
     >
       <motion.div
         layoutId={`smInner-${card.id}`}
@@ -209,25 +194,10 @@ function SmallCard({ card, setActiveCardSmall }) {
           alt={card.title}
           style={{
             borderRadius: 8,
-            width: "80px",
-            height: "80px",
+            width: "70px",
+            height: "70px",
           }}
         />
-        <motion.button
-          aria-hidden
-          tabIndex={-1}
-          layoutId={`smClose-button-${card.id}`}
-          className="close-button"
-          style={{ opacity: 0 }}
-        >
-          <Image
-            width={32}
-            height={32}
-            className={isDark ? "invert" : ""}
-            src={iconX_noBg}
-            alt="close icon"
-          />
-        </motion.button>
 
         <motion.div layoutId={`smCard-content-${card.id}`} className="ml-3">
           <div className="card-text">
@@ -287,20 +257,22 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
             height: "160px",
           }}
         />
-        <motion.button
-          layoutId={`smClose-button-${activeCardSmall.title}`}
-          className="close-button"
-          aria-label="Close button"
-          onClick={() => setActiveCardSmall(null)}
-        >
-          <Image
-            width={32}
-            height={32}
-            className={isDark ? "invert" : ""}
-            src={iconX_noBg}
-            alt="close icon"
-          />
-        </motion.button>
+
+        <div className="buttonBox flex justify-center items-center">
+          <button
+            className="close-button"
+            aria-label="Close button"
+            onClick={() => setActiveCardSmall(null)}
+          >
+            <Image
+              width={32}
+              height={32}
+              className={isDark ? "invert" : ""}
+              src={iconX_noBg}
+              alt="close icon"
+            />
+          </button>
+        </div>
 
         <motion.div
           layoutId={`smCard-content-${activeCardSmall.id}`}
@@ -316,20 +288,22 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
             </motion.h2>
 
             {activeCardSmall.link ? (
-              <a
-                className="ml-2 cursor-pointer underline-offset-0"
-                target="_blank"
-                rel="noopener noreferrer"
-                href={activeCardSmall.link}
-              >
-                <Image
-                  width={24}
-                  height={24}
-                  className={isDark ? "invert" : ""}
-                  src={iconLink}
-                  alt="link icon"
-                />
-              </a>
+              <div className="buttonBox flex justify-center items-center">
+                <a
+                  className="ml-2 cursor-pointer underline-offset-0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={activeCardSmall.link}
+                >
+                  <Image
+                    width={24}
+                    height={24}
+                    className={isDark ? "invert" : ""}
+                    src={iconLink}
+                    alt="link icon"
+                  />
+                </a>
+              </div>
             ) : null}
           </div>
 
@@ -373,7 +347,7 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
             )}
 
             {item.type === "link" && (
-              <ul className="list-disc pl-5 space-y-1 grid grid-cols-3 gap-2">
+              <ul className="list-disc pl-5 grid grid-cols-3 gap-1">
                 {item.content.map((links, index) => (
                   <li key={index}>
                     <a
