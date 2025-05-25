@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Wrap from "./ui/Wrap";
 
-const photoCss = "w-[110px] h-[135px] lg:w-[150px] lg:h-[160px]"
+const photoCss = ""
 
 export default function About() {
   return (
@@ -11,7 +11,7 @@ export default function About() {
         <div className="outer-wrapper">
           <h2>About me</h2>
           <div className="relative w-11/12 md:w-8/12 mt-10 mx-auto">
-            <div className={`photoWrap relative float-left mr-4 mb-2 lg:mr-6 ${photoCss}`}>
+            <div className={`photoWrap hidden xs:inline xs:relative xs:float-left xs:mr-4 xs:mb-2 xs:w-[120px] xs:h-[160px] lg:w-[150px] lg:h-[160px] lg:mr-6 ${photoCss}`}>
               <Image
                 fill
                 src="/assets/shelley_photo_original.jpg"

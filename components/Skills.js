@@ -43,7 +43,7 @@ export default function Skills() {
         <div className="outer-wrapper">
           <h2>
             Skills
-            <span className="block text-base mt-2">顯示比例依工具熟練度調整，越熟悉的工具數值越高</span>
+            <span className="block text-base mx-4 mt-2">顯示比例依工具熟練度調整，越熟悉的工具數值越高。</span>
           </h2>
           <div className="w-11/12 max-w-110 md:max-w-full lg:w-9/12 mt-10 flex flex-col items-center gap-10">
             <div className="skills-wrapper">

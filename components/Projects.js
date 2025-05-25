@@ -349,7 +349,7 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
             )}
 
             {item.type === "link" && (
-              <ul className="list-disc pl-5 grid grid-cols-3 gap-1">
+              <ul className="list-disc pl-5 grid grid-cols-2 xs:grid-cols-3 gap-1">
                 {item.content.map((links, index) => (
                   <li key={index}>
                     <a
