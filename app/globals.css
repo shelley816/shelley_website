@@ -1,26 +1,232 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f6eee6;
+  --background-secondary: #ffffff;
   --foreground: #171717;
+  --smallCardIconbg: #AEDFEA;
+}
+
+.dark {
+  --background: #001b1e;
+  --background-secondary: #0c0c0c;
+  --foreground: #ededed;
+  --smallCardIconbg: #00BCCF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
 }
 
-@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--foreground)]/50 rounded-sm border-2 border-transparent bg-clip-content;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #161616;
+    --background-secondary: #0c0c0c;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .buttonBox:hover button, .buttonBox:hover a {
+    cursor: pointer;
+    transform: translateY(-15%);
+  }
+  .menuList li:hover a {
+    @apply bg-white/30;
+  }
+}
+
+.buttonBox button, .buttonBox a {
+  transition: transform 200ms ease;
+}
+
+.color-transition {
+  transition: background-color 300ms ease;
+}
+
+.clip-transition {
+  transition: clip-path 200ms ease-in;
+}
+
+.opacity-transition {
+  transition: opacity 200ms ease;
+}
+
+.menuList li a {
+  @apply bg-white/0;
+}
+
+/* Hero slogan animation */
+.animations-wrapper span {
+  display: inline-block;
+  animation: reveal 1.3s cubic-bezier(0.19, 1, 0.22, 1) backwards;
+  animation-delay: calc(0.05s * var(--charIndex));
+}
+/* wrapper */
+.outer-wrapper {
+  @apply w-full h-auto md:h-screen px-5 flex flex-col justify-center items-center;
+}
+.outer-wrapper > h2 {
+  @apply text-2xl mt-20 md:mt-0 md:text-3xl text-center;
+}
+/* About */
+.photoWrap img {
+  transition: opacity 200ms ease;
+}
+/* Projects */
+.card {
+  @apply relative w-full max-w-110 md:max-w-full h-78 rounded-lg overflow-hidden my-auto mx-0 cursor-pointer outline-0 select-none;
+}
+.card > img {
+  @apply absolute w-auto h-full object-cover inset-0;
+}
+
+.close-button {
+  @apply absolute top-4 right-4 h-8 w-8 rounded-full backdrop-blur-xs flex justify-center items-center cursor-pointer bg-[var(--background-secondary)]/60;
+}
+
+.card-content {
+  @apply absolute bottom-0 left-0 right-0;
+}
+
+.card-content .card-text {
+  @apply pt-0 pr-4 pb-3;
+}
+
+.card-heading {
+  @apply mb-1 pl-4 text-4xl/8 font-bold max-w-40 text-left uppercase text-[var(--background-secondary)];
+}
+
+.extra-info {
+  @apply relative w-full py-3 px-4 backdrop-blur-sm bg-[var(--background-secondary)]/60;
+}
+
+.extra-info > h3 {
+  @apply mb-3 text-lg font-medium;
+}
+
+/* popover */
+.card-inner {
+  @apply relative w-full h-100;
+}
+
+.card-inner > img {
+  @apply w-full h-full object-cover;
+}
+
+.card-active {
+  @apply absolute top-0 md:top-auto z-81 w-full max-w-130 h-full m-0 md:mx-auto flex flex-col justify-start rounded-none md:rounded-lg overflow-scroll bg-[var(--background-secondary)]! cursor-default!;
+}
+
+/* smallCard */
+.smallCardWrap {
+  @apply w-full max-w-110 md:max-w-full grid grid-cols-1 md:grid-cols-3 md:col-span-2 lg:grid-cols-1 lg:col-span-1 gap-4;
+}
+
+.smallCard {
+  @apply flex justify-start bg-[var(--background-secondary)]/60 cursor-pointer outline-0 select-none;
+}
+
+.smallCard div > img {
+  @apply relative object-cover;
+}
+
+.smallCard-content .Card-text {
+  @apply pt-0 pr-4 pb-3;
+}
+/* Skills */
+.skills-wrapper {
+  @apply w-full p-8 rounded-md bg-[var(--background-secondary)]/60;
+}
+.skills-wrapper h3 {
+  @apply text-lg mb-4 font-medium;
+}
+.skills-wrapper ul {
+  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3;
+}
+.skills-wrapper ul li > p {
+  @apply flex justify-between items-center mb-2;
+}
+.level-bar {
+  @apply w-full h-2 bg-[#c6d8da] rounded-full;
+}
+.level-bar > div {
+  @apply h-2 bg-[#00BCCF] rounded-full;
+}
+/* Experience */
+.ex-wrapper {
+  @apply w-full p-4 rounded-md bg-[var(--background-secondary)]/60;
+}
+
+.ex-wrapper ul li {
+  @apply w-full p-4 flex flex-col md:flex-row;
+}
+.ex-wrapper ul li .date {
+  @apply w-full md:w-3/10 text-lg text-center text-[#00BCCF] md:text-left mb-2 font-medium;
+}
+.ex-wrapper ul li .detail {
+  @apply w-full md:w-7/10 text-base/8;
+}
+.ex-wrapper ul li .detail > span {
+  @apply underline decoration-2 underline-offset-4 decoration-[#00BCCF];
+}
+/* Contact */
+.contact-wrapper {
+  @apply w-full p-4 rounded-md flex flex-col justify-center items-center bg-[var(--background-secondary)]/60;
+}
+.contact-wrapper ul {
+  @apply w-full md:w-6/10 flex flex-col gap-5 md:flex-row mt-4;
+}
+.contact-wrapper ul li {
+  @apply w-full md:w-6/10 flex justify-center items-center;
+}
+.blue-button {
+  @apply relative w-8 h-8 overflow-hidden hover:cursor-pointer;
+}
+.blue-button span {
+  @apply w-full flex justify-center items-center;
+}
+.contact-wrapper > p, .other-wrapper > p {
+  @apply max-w-150 text-base/8 text-left md:text-center mx-4 my-8;
+}
+/* Others */
+.other-wrapper {
+  @apply w-full max-w-125 md:max-w-full p-4 rounded-md flex flex-col justify-center items-center;
+}
+.img-wrapper {
+  @apply w-full h-auto grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4 bg-amber-300;
+}
+.img-wrapper .img-box:nth-child(4) {
+  @apply col-span-1 row-span-1 md:col-span-1 md:row-span-2;
+}
+.img-wrapper .img-box:nth-child(5) {
+  @apply col-span-1 row-span-1 md:col-span-2 md:row-span-2;
+}
+.img-wrapper .img-box {
+  @apply bg-[var(--background-secondary)];
+}
+.img-wrapper .img-box > img {
+  @apply w-full h-full object-cover opacity-50 hover:opacity-100;
 }
