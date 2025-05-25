@@ -7,14 +7,14 @@ export const metadata = {
   title: "Shelley Chen｜Front-End Engineer",
   description: "嗨～我是 Shelley，這是我的個人網站，目前為轉職成為前端工程師努力。",
   keywords: ["Shelley", "Front-End", "Next.js", "作品集", "React", "Web Developer"],
-  authors: [{ name: "Shelley Chen", url: "https://your-domain.com" }],
+  authors: [{ name: "Shelley Chen", url: "https://shelley-website.vercel.app" }],
   creator: "Shelley Chen",
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://shelley-website.vercel.app"),
 
   openGraph: {
     title: "Shelley Chen｜Front-End Engineer",
     description: "嗨～我是 Shelley，這是我的個人網站，目前為轉職成為前端工程師努力。",
-    url: "https://your-domain.com",
+    url: "https://shelley-website.vercel.app",
     siteName: "Shelley Portfolio",
     images: [
       {
