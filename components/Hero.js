@@ -29,7 +29,7 @@ export default function Hero() {
       >
         <motion.div
           style={{ opacity: opacitySlogan }}
-          className="z-10 size-90 md:size-110 rounded-full flex flex-col justify-center items-center bg-[var(--background-secondary)]/70"
+          className="z-10 size-80 md:size-110 rounded-full flex flex-col justify-center items-center bg-[var(--background-secondary)]/70"
         >
           <div className="relative w-full h-full flex flex-col justify-center items-center">
             {sloganText.map((text, index) => (

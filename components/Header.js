@@ -55,7 +55,7 @@ export default function Header({ onModeChange, isDark }) {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`color-transition fixed z-50 w-full ${
+        className={`color-transition fixed z-50 w-full bg-linear-to-t from-[var(--background-secondary)]/0 to-[var(--background-secondary)]/60 ${
           isMenuOpen
             ? "bg-[var(--background-secondary)]"
             : "bg-[var(--background-secondary)]/0"
