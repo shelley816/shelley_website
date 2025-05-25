@@ -18,6 +18,7 @@ export default function About() {
                 alt="Shelley Chen"
                 className="absolute rounded-md"
                 style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <Image
                 fill
@@ -25,6 +26,7 @@ export default function About() {
                 alt="Shelley Chen"
                 className="absolute rounded-md opacity-100 hover:opacity-0"
                 style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <p className="text-base/7 text-justify md:text-lg/8">
