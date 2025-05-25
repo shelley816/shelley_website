@@ -32,7 +32,7 @@ export const skills = [
   {
     sort: "frontend",
     name: "Javascript, jQuery",
-    level: 40,
+    level: 50,
   },
   {
     sort: "design",

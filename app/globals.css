@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #eeeeee;
+  --background: #f6eee6;
   --background-secondary: #ffffff;
   --foreground: #171717;
+  --smallCardIconbg: #AEDFEA;
 }
 
 .dark {
-  --background: #161616;
+  --background: #001b1e;
   --background-secondary: #0c0c0c;
   --foreground: #ededed;
+  --smallCardIconbg: #00BCCF;
 }
 
 @theme inline {
@@ -207,14 +209,14 @@ body {
   @apply w-full flex justify-center items-center;
 }
 .contact-wrapper > p, .other-wrapper > p {
-  @apply max-w-155 text-base/8 text-left md:text-center mx-4 my-8;
+  @apply max-w-150 text-base/8 text-left md:text-center mx-4 my-8;
 }
 /* Others */
 .other-wrapper {
   @apply w-full max-w-125 md:max-w-full p-4 rounded-md flex flex-col justify-center items-center;
 }
 .img-wrapper {
-  @apply w-full h-200 grid grid-cols-2 md:grid-cols-4 bg-amber-300;
+  @apply w-full h-auto grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4 bg-amber-300;
 }
 .img-wrapper .img-box:nth-child(4) {
   @apply col-span-1 row-span-1 md:col-span-1 md:row-span-2;
@@ -226,5 +228,5 @@ body {
   @apply bg-[var(--background-secondary)];
 }
 .img-wrapper .img-box > img {
-  @apply w-full h-full object-cover opacity-60 hover:opacity-100;
+  @apply w-full h-full object-cover opacity-50 hover:opacity-100;
 }

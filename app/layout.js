@@ -1,13 +1,37 @@
 import { ContextProvider } from "@/components/store/Context";
-import HtmlContainer from "@/components/HtmlContainer";
+import HtmlContainer from "@/components/ui/HtmlContainer";
 
 import "./globals.css";
 
 export const metadata = {
-  title: "Shelley Chen",
-  description: "Personal website",
+  title: "Shelley Chen｜Front-End Engineer",
+  description: "嗨～我是 Shelley，這是我的個人網站，目前為轉職成為前端工程師努力。",
+  keywords: ["Shelley", "Front-End", "Next.js", "作品集", "React", "Web Developer"],
+  authors: [{ name: "Shelley Chen", url: "https://your-domain.com" }],
+  creator: "Shelley Chen",
+  metadataBase: new URL("https://your-domain.com"),
+
+  openGraph: {
+    title: "Shelley Chen｜Front-End Engineer",
+    description: "嗨～我是 Shelley，這是我的個人網站，目前為轉職成為前端工程師努力。",
+    url: "https://your-domain.com",
+    siteName: "Shelley Portfolio",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Shelley 的個人網站封面",
+      },
+    ],
+    locale: "zh-TW",
+    type: "website",
+  },
+
   icons: {
-    icon: "/icon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 

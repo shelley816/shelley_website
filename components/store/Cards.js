@@ -1,3 +1,7 @@
+import { FaReact } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { BiSolidBookBookmark } from "react-icons/bi";
+
 export const CARDS = [
   {
     id: "product01",
@@ -10,9 +14,26 @@ export const CARDS = [
     label: [
       { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
       { sort: "Redux", bgClass: "bg-purple-100", textColor: "text-purple-800" },
-      { sort: "React Router", bgClass: "bg-rose-100", textColor: "text-rose-800" },
-      { sort: "Tailwind CSS", bgClass: "bg-blue-100", textColor: "text-blue-800" },
-      { sort: "Firebase", bgClass: "bg-amber-100", textColor: "text-amber-800" },
+      {
+        sort: "React Router",
+        bgClass: "bg-rose-100",
+        textColor: "text-rose-800",
+      },
+      {
+        sort: "Tailwind CSS",
+        bgClass: "bg-blue-100",
+        textColor: "text-blue-800",
+      },
+      {
+        sort: "Firebase",
+        bgClass: "bg-amber-100",
+        textColor: "text-amber-800",
+      },
+      {
+        sort: "Render",
+        bgClass: "bg-fuchsia-100",
+        textColor: "text-fuchsia-800",
+      },
     ],
     longDescription: [
       {
@@ -55,9 +76,21 @@ export const CARDS = [
     label: [
       { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
       { sort: "Next.js", bgClass: "bg-zinc-300", textColor: "text-zinc-900" },
-      { sort: "Tailwind CSS", bgClass: "bg-blue-100", textColor: "text-blue-800" },
-      { sort: "Framer Motion", bgClass: "bg-yellow-100", textColor: "text-yellow-800" },
-      { sort: "Vercel", bgClass: "bg-neutral-300", textColor: "text-neutral-900" },
+      {
+        sort: "Tailwind CSS",
+        bgClass: "bg-blue-100",
+        textColor: "text-blue-800",
+      },
+      {
+        sort: "Framer Motion",
+        bgClass: "bg-yellow-100",
+        textColor: "text-yellow-800",
+      },
+      {
+        sort: "Vercel",
+        bgClass: "bg-neutral-300",
+        textColor: "text-neutral-900",
+      },
     ],
     longDescription: [
       {
@@ -90,61 +123,89 @@ export const CARDS = [
   },
   {
     id: "product03",
-    title: "Project 3",
-    subtitle: "Project 3 description",
-    description: "Project 3 description",
-    image: "/assets/logo.jpg",
+    title: "React 課堂練習",
+    subtitle: "",
+    description: "",
+    image: (
+      <FaReact className="w-full h-full m-4 text-[var(--background-secondary)]" />
+    ),
     link: undefined,
     logo: undefined, // 暫時無圖片
     label: [
       { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
-      { sort: "Next.js", bgClass: "bg-zinc-300", textColor: "text-zinc-900" },
+      { sort: "Vite", bgClass: "bg-violet-200", textColor: "text-violet-800" },
     ],
     longDescription: [
       {
         title: "簡介",
         type: "text",
         content: [
-          "這是我第一個完整開發的 React 作品，從網站架構規劃、視覺設計到程式撰寫皆由我獨立完成。",
-          "由於這個專案主要目的是熟悉 React 與前端開發流程，因此在視覺上沒有過多著墨。色塊與插圖部分則是運用 AI 工具輔助生成，以加快設計流程。",
+          "關於如何學習 React，我是在 Udemy 購買此課程 React - The Complete Guide 2025，裡面有許多實作練習。",
+          "如果有聽不懂的地方會再詢問 ChatGPT，或是在課程下方留言區也可能可以找到答案。",
         ],
       },
-    ],
-  },
-  {
-    id: "product04",
-    title: "Project 4",
-    subtitle: "Project 4 description",
-    description: "Project 4 description",
-    image: "/assets/logo.jpg",
-    link: "https://www.google.com/",
-    logo: undefined, // 暫時無圖片
-    label: [
-      { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
-      { sort: "Next.js", bgClass: "bg-zinc-300", textColor: "text-zinc-900" },
-    ],
-    longDescription: [
       {
-        title: "簡介",
-        type: "text",
+        title: "連結資訊",
+        type: "link",
         content: [
-          "這是我第一個完整開發的 React 作品，從網站架構規劃、視覺設計到程式撰寫皆由我獨立完成。",
-          "由於這個專案主要目的是熟悉 React 與前端開發流程，因此在視覺上沒有過多著墨。色塊與插圖部分則是運用 AI 工具輔助生成，以加快設計流程。",
+          {
+            title: "Countdown",
+            link: "https://shelley816.github.io/practice_01_countdown/",
+          },
+          {
+            title: "PlacePicker",
+            link: "https://shelley816.github.io/practice_02_placepicker/",
+          },
+          {
+            title: "Quiz",
+            link: "https://shelley816.github.io/practice_03_quiz/",
+          },
         ],
       },
     ],
   },
   {
     id: "product05",
+    title: "我的 GitHub",
+    subtitle: "",
+    description: "",
+    image: (
+      <FaGithub className="w-full h-full m-4 text-[var(--background-secondary)]" />
+    ),
+    link: "https://github.com/shelley816",
+    logo: undefined, // 暫時無圖片
+    label: [
+      { sort: "Git", bgClass: "bg-orange-100", textColor: "text-orange-800" },
+      { sort: "GitHub", bgClass: "bg-slate-100", textColor: "text-slate-800" },
+    ],
+    longDescription: [
+      {
+        title: "簡介",
+        type: "text",
+        content: [
+          "2024 年五月先從 Git & GitHub 開始學習，接著學習 JavaScript & jQuery，過程中也有看一些 Scss、GSAP 的教學影片，最後再學習 React，透過這些學習的過程練習 Git 的使用。",
+          "但我並沒有把所有學習過程中的練習都放到 GitHub 上，因為有些練習內容較零碎，或者包含後端功能，對於還不熟悉後端的我來說，部署起來相對困難，因此只放上一些靜態網站的練習。",
+        ],
+      },
+    ],
+  },
+  {
+    id: "product04",
     title: "學習筆記",
-    subtitle: "Project 5 description",
-    description: "Project 5 description",
-    image: "/assets/logo.jpg",
+    subtitle: "",
+    description: "",
+    image: (
+      <BiSolidBookBookmark className="w-full h-full m-4 text-[var(--background-secondary)]" />
+    ),
     link: undefined,
     logo: undefined, // 暫時無圖片
     label: [
       { sort: "Git", bgClass: "bg-orange-100", textColor: "text-orange-800" },
-      { sort: "JavaScript", bgClass: "bg-amber-100", textColor: "text-amber-800" },
+      {
+        sort: "JavaScript",
+        bgClass: "bg-amber-100",
+        textColor: "text-amber-800",
+      },
       { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
     ],
     longDescription: [
@@ -153,7 +214,7 @@ export const CARDS = [
         type: "text",
         content: [
           "上課過程中的隨手筆記，主要是幫助自己記憶內容。",
-          "如有興趣歡迎參考，內容較為零散，可能不好閱讀，敬請見諒。",
+          "如有興趣歡迎參考，內容較為零散可能不好閱讀，敬請見諒。",
         ],
       },
       {

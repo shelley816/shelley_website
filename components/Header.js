@@ -14,7 +14,7 @@ const menuList = [
   { title: "Projects", link: "projectsSection" },
   { title: "Skills", link: "skillsSection" },
   { title: "Experience", link: "experienceSection" },
-  { title: "Contact", link: "contactSection" },
+  { title: "Contacts", link: "contactSection" },
   { title: "Others", link: "othersSection" },
 ];
 

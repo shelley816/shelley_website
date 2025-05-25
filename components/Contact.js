@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTheme } from "@/components/store/Context";
-import { AnimatedState } from "./AnimatedState";
+import { AnimatedState } from "./ui/AnimatedState";
 import Image from "next/image";
 
 import Wrap from "./ui/Wrap";
@@ -39,7 +39,7 @@ export default function Contact() {
     <>
       <Wrap areaLink="contactSection">
         <div className="outer-wrapper">
-          <h2>Contact</h2>
+          <h2>Contacts</h2>
           <div className="w-11/12 max-w-110 md:max-w-full lg:w-9/12 mt-10 flex flex-col items-center gap-10">
             <div className="contact-wrapper">
               <ul>
@@ -75,7 +75,7 @@ export default function Contact() {
                   </button>
                 </li>
               </ul>
-              <p>若您對我的經歷有興趣，或有任何合作想法，歡迎透過 Linkedin 和 E-mail 與我聯繫，我會在收到訊息或信件幾天內盡快回覆您。</p>
+              <p>若您對我的經歷有興趣或有任何合作想法，歡迎透過 Linkedin 和 E-mail 與我聯繫，我會在收到訊息或信件幾天內盡快回覆您。</p>
             </div>
           </div>
         </div>

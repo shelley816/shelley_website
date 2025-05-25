@@ -188,16 +188,16 @@ function SmallCard({ card, setActiveCardSmall }) {
         layoutId={`smInner-${card.id}`}
         className="p-3 flex justify-start items-center"
       >
-        <motion.img
+        <motion.div
           layoutId={`smImage-${card.id}`}
-          src={card.image}
-          alt={card.title}
           style={{
-            borderRadius: 8,
             width: "70px",
             height: "70px",
           }}
-        />
+          className="w-full h-full rounded-lg flex justify-center items-center bg-[var(--smallCardIconbg)]"
+        >
+          {card.image}
+        </motion.div>
 
         <motion.div layoutId={`smCard-content-${card.id}`} className="ml-3">
           <div className="card-text">
@@ -247,16 +247,18 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
         layoutId={`smInner-${activeCardSmall.id}`}
         className="p-3 pb-0 flex justify-start items-end"
       >
-        <motion.img
+        <motion.div
           layoutId={`smImage-${activeCardSmall.id}`}
-          src={activeCardSmall.image}
-          alt={activeCardSmall.title}
           style={{
-            borderRadius: 8,
-            width: "160px",
-            height: "160px",
+            width: "150px",
+            height: "150px",
           }}
-        />
+          className="w-full h-full rounded-lg bg-[var(--smallCardIconbg)]"
+        >
+          <div className="w-full h-full p-5 flex justify-center items-center">
+          {activeCardSmall.image}
+          </div>
+        </motion.div>
 
         <div className="buttonBox flex justify-center items-center">
           <button
