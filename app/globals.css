@@ -4,14 +4,14 @@
   --background: #f6eee6;
   --background-secondary: #ffffff;
   --foreground: #171717;
-  --smallCardIconbg: #AEDFEA;
+  --smallCardIconbg: #aedfea;
 }
 
 .dark {
   --background: #001b1e;
   --background-secondary: #0c0c0c;
   --foreground: #ededed;
-  --smallCardIconbg: #00BCCF;
+  --smallCardIconbg: #00bccf;
 }
 
 @theme inline {
@@ -46,11 +46,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: sans-serif, Arial, Helvetica;
+  font-family: var(--font-poppins), sans-serif, Arial, Helvetica;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .buttonBox:hover button, .buttonBox:hover a {
+  .buttonBox:hover button,
+  .buttonBox:hover a {
     cursor: pointer;
     transform: translateY(-15%);
   }
@@ -59,7 +60,8 @@ body {
   }
 }
 
-.buttonBox button, .buttonBox a {
+.buttonBox button,
+.buttonBox a {
   transition: transform 200ms ease;
 }
 
@@ -209,7 +211,8 @@ body {
 .blue-button span {
   @apply w-full flex justify-center items-center;
 }
-.contact-wrapper > p, .other-wrapper > p {
+.contact-wrapper > p,
+.other-wrapper > p {
   @apply max-w-150 text-base/8 text-left md:text-center mx-4 my-8;
 }
 /* Others */
