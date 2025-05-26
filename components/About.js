@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Wrap from "./ui/Wrap";
 
-const photoCss = ""
+const photoCss = "xs:w-[120px] xs:h-[160px] lg:w-[150px] lg:h-[160px]"
 
 export default function About() {
   return (
@@ -11,7 +11,7 @@ export default function About() {
         <div className="outer-wrapper">
           <h2>About me</h2>
           <div className="relative w-11/12 md:w-8/12 mt-10 mx-auto">
-            <div className={`photoWrap hidden xs:inline xs:relative xs:float-left xs:mr-4 xs:mb-2 xs:w-[120px] xs:h-[160px] lg:w-[150px] lg:h-[160px] lg:mr-6 ${photoCss}`}>
+            <div className={`photoWrap hidden xs:inline xs:relative xs:float-left xs:mr-4 xs:mb-2  lg:mr-6 ${photoCss}`}>
               <Image
                 fill
                 src="/assets/shelley_photo_original.jpg"
@@ -30,7 +30,7 @@ export default function About() {
               />
             </div>
             <p className="text-base/7 text-justify md:text-lg/8">
-              我是 Shelley 來自台灣，從 2012 年起就開始接觸網路產業。
+              我是 Shelley，從 2012 年起就開始接觸網路產業。
               <br />
               大學時期參加的一場講座啟發了我對程式語言的好奇，這份興趣也逐漸轉化為職涯方向。
               <br /><br />
