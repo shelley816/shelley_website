@@ -6,14 +6,14 @@ import { useRef } from "react";
 
 import Wrap from "./ui/Wrap";
 
-function SkillBar({ name, level }) {
+function SkillBar({ name, level, text }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
     <li>
       <p>
-        <span>{name}</span>
+        <span className="text-[#00BCCF] font-bold">{name}</span>
         <motion.span
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
@@ -22,14 +22,17 @@ function SkillBar({ name, level }) {
           {level}%
         </motion.span>
       </p>
-      <div className="level-bar">
+      {text.map((text, index) => (
+        <p key={index}>{text}</p>
+      ))}
+      {/* <div className="level-bar">
         <motion.div
           ref={ref}
           initial={{ width: 0 }}
           animate={isInView ? { width: `${level}%` } : {}}
           transition={{ duration: 1, ease: [0.77, 0, 0.175, 1] }}
         />
-      </div>
+      </div> */}
     </li>
   );
 }
@@ -43,21 +46,24 @@ export default function Skills() {
         <div className="outer-wrapper">
           <h2>
             Skills
-            <span className="block text-base mx-4 mt-2">
+            {/* <span className="block text-base mx-4 mt-2">
               顯示比例依工具熟練度調整，越熟悉的工具數值越高。
-            </span>
+            </span> */}
           </h2>
           <div className="w-11/12 max-w-110 md:max-w-full lg:w-9/12 mt-10 flex flex-col items-center gap-10">
             <div className="skills-wrapper">
-              <h3>Frontend</h3>
+              {/* <h3>Frontend</h3> */}
               <ul>
-                {skills
-                  .filter((item) => item.sort === "frontend")
-                  .map((item, index) => (
-                    <SkillBar key={index} name={item.name} level={item.level} />
-                  ))}
+                {skills.map((item, index) => (
+                  <SkillBar
+                    key={index}
+                    name={item.name}
+                    level={item.level}
+                    text={item.description}
+                  />
+                ))}
               </ul>
-              <p className="text-base/8 mt-4">
+              {/* <p className="text-base/8 mt-4">
                 已熟悉的基礎技能包括 HTML、Tailwind CSS、Git 與 GitHub。
                 <br />
                 2018 年在六角學院購買了第一門 JavaScript
@@ -65,9 +71,9 @@ export default function Skills() {
                 年離職後重新投入學習，並在 Udemy 購買了更新版的 JavaScript
                 課程，目前覺得基礎知識的部分都掌握得不錯，持續學習中。
                 <br />
-              </p>
+              </p> */}
             </div>
-            <div className="skills-wrapper">
+            {/* <div className="skills-wrapper">
               <h3>Design</h3>
               <ul>
                 {skills
@@ -76,7 +82,7 @@ export default function Skills() {
                     <SkillBar key={index} name={item.name} level={item.level} />
                   ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </Wrap>

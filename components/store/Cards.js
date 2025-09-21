@@ -4,6 +4,42 @@ import { BiSolidBookBookmark } from "react-icons/bi";
 
 export const CARDS = [
   {
+    id: "product00",
+    title: "SROOTD",
+    subtitle: "提供每日穿搭靈感的網站",
+    description:
+      "網站使用物件導向、MVC 架構開發，練習串接 OpenWeather、Unsplash APIs。",
+    image: "/assets/project_00.jpg",
+    link: "https://srootd-shelley.netlify.app/",
+    logo: undefined, // 暫時無圖片
+    label: [
+      {
+        sort: "JavaScript",
+        bgClass: "bg-amber-100",
+        textColor: "text-amber-800",
+      },
+      {
+        sort: "MVC 開發",
+        bgClass: "bg-blue-100",
+        textColor: "text-blue-800",
+      },
+      {
+        sort: "物件導向開發",
+        bgClass: "bg-neutral-300",
+        textColor: "text-neutral-900",
+      },
+    ],
+    longDescription: [
+      {
+        title: "簡介",
+        type: "text",
+        content: [
+          "網站使用物件導向、MVC 架構開發，練習串接 OpenWeather、Unsplash APIs，提供每日穿搭靈感的網站。",
+        ],
+      },
+    ],
+  },
+  {
     id: "product01",
     title: "Homestay Pottery",
     subtitle: "民宿與陶藝體驗網站",

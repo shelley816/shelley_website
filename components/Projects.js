@@ -256,7 +256,7 @@ function ActiveCardSmall({ activeCardSmall, setActiveCardSmall }) {
           className="w-full h-full rounded-lg bg-[var(--smallCardIconbg)]"
         >
           <div className="w-full h-full p-5 flex justify-center items-center">
-          {activeCardSmall.image}
+            {activeCardSmall.image}
           </div>
         </motion.div>
 
@@ -393,10 +393,10 @@ export default function Projects() {
         <div className="outer-wrapper">
           <h2>Projects</h2>
           <div className="w-11/12 mt-10 flex flex-col items-center gap-10 md:grid md:grid-cols-2 lg:grid-cols-3">
-            {CARDS.slice(0, 2).map((card) => (
+            {CARDS.slice(0, 3).map((card) => (
               <Card key={card.id} card={card} setActiveCard={setActiveCard} />
             ))}
-            <div className="smallCardWrap">
+            {/* <div className="smallCardWrap">
               {CARDS.slice(2).map((card) => (
                 <SmallCard
                   key={card.id}
@@ -404,7 +404,7 @@ export default function Projects() {
                   setActiveCardSmall={setActiveCardSmall}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
         <AnimatePresence>
