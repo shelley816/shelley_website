@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Wrap from "./ui/Wrap";
+import Link from "next/link";
 
 const photoCss = "xs:w-[120px] xs:h-[160px] lg:w-[150px] lg:h-[160px]";
 
@@ -32,7 +33,8 @@ export default function About() {
               />
             </div>
             <p className="text-base/7 text-justify md:text-lg/8">
-              我是視覺傳達設計系背景，過去在設計公司與軟體公司擔任網頁設計師，負責網站視覺、UI
+              我是
+              Shelley，過去在設計公司與軟體公司擔任網頁設計師，負責網站視覺、UI
               設計與切版實作，累積了多年實務經驗，對使用者經驗與畫面細節特別重視。這段設計經驗讓我在轉職前端工程時，更能從設計角度思考畫面呈現與操作邏輯，並有效與設計、開發團隊溝通。
               <br />
               <br />
@@ -40,13 +42,15 @@ export default function About() {
               2024 年開始全職自學前端技術，透過六角學院與 Udemy 課程系統性學習
               JavaScript、React、Next.js
               等核心技能，並實際開發作品，將所學應用於實作。
+              {/* <br />
               <br />
-              <br />
-              近期完成的專案如《SROOTD 每日穿搭靈感網站》，結合 Unsplash 與
-              OpenWeather APIs，使用物件導向、MVC
-              架構開發並處理非同步資料與錯誤狀態；《usePopcorn》練習了元件拆分、狀態管理、loading
-              畫面切換等邏輯；《Personal website》嘗試使用 Framer Motion
-              製作互動動畫、深淺背景切換，提升使用者體驗。
+              近期完成的專案如《The Wild Oasis》使用 Next.js
+              開發的訂房管理網站，專案包含取得資料、處理畫面狀態（loading /
+              empty），並部署至 Vercel，作為實務練習與架構理解的成果展示；
+              《SROOTD 每日穿搭靈感網站》，結合 Unsplash 與 OpenWeather
+              APIs，使用物件導向、MVC
+              架構開發並處理非同步資料與錯誤狀態；《Personal website》嘗試使用
+              Framer Motion 製作互動動畫、深淺背景切換，提升使用者體驗。 */}
               <br />
               <br />
               目前我已具備獨立建置網站的能力，能從 UI 切版、元件模組化、API
