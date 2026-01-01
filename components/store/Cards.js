@@ -40,6 +40,50 @@ export const CARDS = [
     ],
   },
   {
+    id: "product06",
+    title: "The Wild Oasis",
+    subtitle: "簡易訂房網站",
+    description:
+      "使用 Next.js 開發的訂房管理網站，專案包含取得資料、處理畫面狀態（loading / empty），並部署至 Vercel，作為實務練習與架構理解的成果展示。",
+    image: "/assets/project_06.jpg",
+    link: "https://the-wild-oasis-website-demo-flame.vercel.app/",
+    logo: undefined, // 暫時無圖片
+    label: [
+      { sort: "React", bgClass: "bg-sky-100", textColor: "text-sky-800" },
+      { sort: "Next.js", bgClass: "bg-zinc-300", textColor: "text-zinc-900" },
+      {
+        sort: "Tailwind CSS",
+        bgClass: "bg-blue-100",
+        textColor: "text-blue-800",
+      },
+      {
+        sort: "Vercel",
+        bgClass: "bg-neutral-300",
+        textColor: "text-neutral-900",
+      },
+    ],
+    longDescription: [
+      {
+        title: "簡介",
+        type: "text",
+        content: [
+          "The Wild Oasis 是一個以度假小木屋為主題的訂房管理網站，使用 Next.js 開發，作為熟悉現代前端框架與專案架構的實務練習作品。",
+          "整體專案著重於頁面結構規劃、資料取得流程，處理局部更新內容以提升使用者體驗。",
+        ],
+      },
+      {
+        title: "功能特色",
+        type: "list",
+        content: [
+          "房型主頁面提供人數塞選功能，並顯示相關房型資訊。",
+          "訂房頁面提供日期選擇、人數選擇、訂房人資訊填寫等功能。",
+          "訂房完成後，顯示訂房成功頁面，並提供編輯及刪除訂單功能。",
+          "使用 Google 登入功能，方便使用者快速登入。",
+        ],
+      },
+    ],
+  },
+  {
     id: "product01",
     title: "Homestay Pottery",
     subtitle: "民宿與陶藝體驗網站",
@@ -60,16 +104,16 @@ export const CARDS = [
         bgClass: "bg-blue-100",
         textColor: "text-blue-800",
       },
-      {
-        sort: "Firebase",
-        bgClass: "bg-amber-100",
-        textColor: "text-amber-800",
-      },
-      {
-        sort: "Render",
-        bgClass: "bg-fuchsia-100",
-        textColor: "text-fuchsia-800",
-      },
+      // {
+      //   sort: "Firebase",
+      //   bgClass: "bg-amber-100",
+      //   textColor: "text-amber-800",
+      // },
+      // {
+      //   sort: "Render",
+      //   bgClass: "bg-fuchsia-100",
+      //   textColor: "text-fuchsia-800",
+      // },
     ],
     longDescription: [
       {

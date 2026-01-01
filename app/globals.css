@@ -167,11 +167,12 @@ body {
   @apply text-lg mb-4 font-medium;
 }
 .skills-wrapper ul {
-  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3;
+  @apply grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2;
 }
+/* .skills-wrapper li:nth-child(1),
 .skills-wrapper li:nth-child(2) {
   @apply lg:col-span-2;
-}
+} */
 .skills-wrapper ul li > p {
   @apply flex justify-between items-center mb-2;
 }
